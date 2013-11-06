@@ -1,0 +1,96 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage[english, ngerman]{babel}
+
+\usecolortheme{tum}
+\useoutertheme{tum}
+
+\setbeamerfont{author}{size=\footnotesize}
+\setbeamerfont{date}{size=\scriptsize}
+\setbeamerfont{date}{size=\scriptsize}
+
+\useinnertheme{rectangles}
+
+\usepackage{pgf}  
+\usepackage{tikz}
+\logo{\pgfputat{\pgfxy(-0.2, 8.9)}{\pgfbox[right,top]{
+\begin{tikzpicture}[y=0.38pt, x=0.38pt,yscale=-1, inner sep=0pt, outer sep=0pt]
+\begin{scope}[cm={{1.25,0.0,0.0,-1.25,(0.0,35.4325)}}]
+    \path[fill=tum,nonzero rule] (4.8090,23.2950) -- (4.8090,-0.0020) --
+      (9.8590,-0.0020) -- (9.8590,23.2600) -- (15.4730,23.2600) -- (15.4730,-0.0020)
+      -- (31.5390,-0.0020) -- (31.5390,23.0140) -- (37.2580,23.0140) --
+      (37.2580,0.0060) -- (42.5550,0.0060) -- (42.5550,23.0140) -- (48.3440,23.0140)
+      -- (48.3440,0.0060) -- (53.6410,0.0060) -- (53.6410,28.3460) --
+      (26.4530,28.3460) -- (26.4530,5.1580) -- (20.6290,5.1580) -- (20.6290,28.3110)
+      -- (-0.0000,28.3110) -- (-0.0000,23.2950) -- (4.8090,23.2950) -- cycle;
+\end{scope}
+\end{tikzpicture}
+}}}
+
+\setbeamertemplate{title page}
+{
+	\vbox{}
+	\vfill
+	\begin{flushleft}
+		\begin{beamercolorbox}[sep=8pt,left]{title}
+			\usebeamerfont{title}\inserttitle\par%
+			\ifx\insertsubtitle\@empty%
+			\else%
+				\vskip0.25em%
+				{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+			\fi%
+    	\end{beamercolorbox}%
+    	\vskip1em\par
+		\begin{beamercolorbox}[sep=8pt,left]{author}
+		\usebeamerfont{author}\insertauthor
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[sep=8pt,left]{institute}
+		\usebeamerfont{institute}\insertinstitute
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[sep=8pt,left]{date}
+		\usebeamerfont{date}\insertdate
+		\end{beamercolorbox}\vskip0.5em
+		{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+	\end{flushleft}
+	\vfill
+}
+
+\mode<presentation>
+
+\title{Title}
+\subtitle{Subtitle}
+
+\author{Author}
+\institute[]{Institute}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Frametitle}
+\framesubtitle{Framesubtitle}
+Lorem ipsum
+\begin{itemize}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+\end{itemize}
+\vfill
+Question?
+\begin{columns}[t]
+\column{.45\textwidth}
+\begin{block}{Block 1}
+Text 1
+\end{block}
+\column{.45\textwidth}
+\begin{block}{Block 2}
+Text 2
+\end{block}
+\end{columns}
+\end{frame}
+
+\end{document}
