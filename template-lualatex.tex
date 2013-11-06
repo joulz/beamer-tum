@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usepackage{fontspec}
 \usepackage[english, ngerman]{babel}
+\usepackage{textpos}
 
 \usecolortheme{tum}
 \useoutertheme{tum}
@@ -19,7 +20,7 @@
 
 \usepackage{pgf}  
 \usepackage{tikz}
-\logo{\pgfputat{\pgfxy(-0.2, 8.9)}{\pgfbox[right,top]{
+\logo{
 \begin{tikzpicture}[y=0.38pt, x=0.38pt,yscale=-1, inner sep=0pt, outer sep=0pt]
 \begin{scope}[cm={{1.25,0.0,0.0,-1.25,(0.0,35.4325)}}]
     \path[fill=tum,nonzero rule] (4.8090,23.2950) -- (4.8090,-0.0020) --
@@ -31,7 +32,7 @@
       -- (-0.0000,28.3110) -- (-0.0000,23.2950) -- (4.8090,23.2950) -- cycle;
 \end{scope}
 \end{tikzpicture}
-}}}
+}
 
 \setbeamertemplate{title page}
 {
@@ -59,6 +60,15 @@
 		{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
 	\end{flushleft}
 	\vfill
+}
+
+\setbeamertemplate{sidebar right}
+{
+  \vskip8pt%
+  \llap{\insertlogo\hskip7pt}%
+  \vfill%
+  \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+  \vskip2pt%
 }
 
 \mode<presentation>
